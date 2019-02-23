@@ -5,13 +5,13 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		00E356F31AD99517003FC87E /* RNProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNProjectTests.m */; };
 		11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
@@ -20,7 +20,6 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -37,9 +36,55 @@
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		D90816A299B7423FA39E488A /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 322EF1E785394D51BDB36936 /* libRNCamera.a */; };
+		E179A95D2221FC0700B73575 /* BCLlefteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A9372221FC0700B73575 /* BCLlefteyeclosed_200.emd */; };
+		E179A95F2221FC0700B73575 /* BCLlefteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A9372221FC0700B73575 /* BCLlefteyeclosed_200.emd */; };
+		E179A9602221FC0700B73575 /* BCLlefteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A9372221FC0700B73575 /* BCLlefteyeclosed_200.emd */; };
+		E179A9612221FC0700B73575 /* BCLjoy_100.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A9382221FC0700B73575 /* BCLjoy_100.emd */; };
+		E179A9632221FC0700B73575 /* BCLjoy_100.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A9382221FC0700B73575 /* BCLjoy_100.emd */; };
+		E179A9642221FC0700B73575 /* BCLjoy_100.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A9382221FC0700B73575 /* BCLjoy_100.emd */; };
+		E179A9652221FC0700B73575 /* MFTprec_202.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A9392221FC0700B73575 /* MFTprec_202.emd */; };
+		E179A9672221FC0700B73575 /* MFTprec_202.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A9392221FC0700B73575 /* MFTprec_202.emd */; };
+		E179A9682221FC0700B73575 /* MFTprec_202.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A9392221FC0700B73575 /* MFTprec_202.emd */; };
+		E179A9692221FC0700B73575 /* PFFprec_702.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A93A2221FC0700B73575 /* PFFprec_702.emd */; };
+		E179A96B2221FC0700B73575 /* PFFprec_702.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A93A2221FC0700B73575 /* PFFprec_702.emd */; };
+		E179A96C2221FC0700B73575 /* PFFprec_702.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A93A2221FC0700B73575 /* PFFprec_702.emd */; };
+		E179A96D2221FC0700B73575 /* LMprec_600.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A93B2221FC0700B73575 /* LMprec_600.emd */; };
+		E179A96F2221FC0700B73575 /* LMprec_600.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A93B2221FC0700B73575 /* LMprec_600.emd */; };
+		E179A9702221FC0700B73575 /* LMprec_600.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A93B2221FC0700B73575 /* LMprec_600.emd */; };
+		E179A9712221FC0700B73575 /* BCLrighteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A93C2221FC0700B73575 /* BCLrighteyeclosed_200.emd */; };
+		E179A9732221FC0700B73575 /* BCLrighteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A93C2221FC0700B73575 /* BCLrighteyeclosed_200.emd */; };
+		E179A9742221FC0700B73575 /* BCLrighteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A93C2221FC0700B73575 /* BCLrighteyeclosed_200.emd */; };
+		E179A9752221FC0700B73575 /* FaceDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A93F2221FC0700B73575 /* FaceDetector.framework */; };
+		E179A9772221FC0700B73575 /* FaceDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A93F2221FC0700B73575 /* FaceDetector.framework */; };
+		E179A9782221FC0700B73575 /* FaceDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A93F2221FC0700B73575 /* FaceDetector.framework */; };
+		E179A9792221FC0700B73575 /* dummy.txt in Resources */ = {isa = PBXBuildFile; fileRef = E179A9412221FC0700B73575 /* dummy.txt */; };
+		E179A97B2221FC0700B73575 /* dummy.txt in Resources */ = {isa = PBXBuildFile; fileRef = E179A9412221FC0700B73575 /* dummy.txt */; };
+		E179A97C2221FC0700B73575 /* dummy.txt in Resources */ = {isa = PBXBuildFile; fileRef = E179A9412221FC0700B73575 /* dummy.txt */; };
+		E179A97D2221FC0700B73575 /* GoogleMobileVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9442221FC0700B73575 /* GoogleMobileVision.framework */; };
+		E179A97F2221FC0700B73575 /* GoogleMobileVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9442221FC0700B73575 /* GoogleMobileVision.framework */; };
+		E179A9802221FC0700B73575 /* GoogleMobileVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9442221FC0700B73575 /* GoogleMobileVision.framework */; };
+		E179A9842221FC0700B73575 /* dummy.txt in Resources */ = {isa = PBXBuildFile; fileRef = E179A9462221FC0700B73575 /* dummy.txt */; };
+		E179A9852221FC0700B73575 /* GoogleMVDataOutput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9492221FC0700B73575 /* GoogleMVDataOutput.framework */; };
+		E179A9872221FC0700B73575 /* GoogleMVDataOutput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9492221FC0700B73575 /* GoogleMVDataOutput.framework */; };
+		E179A9882221FC0700B73575 /* GoogleMVDataOutput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9492221FC0700B73575 /* GoogleMVDataOutput.framework */; };
+		E179A98D2221FC0700B73575 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A94D2221FC0700B73575 /* GoogleSymbolUtilities.framework */; };
+		E179A98F2221FC0700B73575 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A94D2221FC0700B73575 /* GoogleSymbolUtilities.framework */; };
+		E179A9902221FC0700B73575 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A94D2221FC0700B73575 /* GoogleSymbolUtilities.framework */; };
+		E179A9952221FC0700B73575 /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9522221FC0700B73575 /* GoogleNetworkingUtilities.framework */; };
+		E179A9972221FC0700B73575 /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9522221FC0700B73575 /* GoogleNetworkingUtilities.framework */; };
+		E179A9982221FC0700B73575 /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9522221FC0700B73575 /* GoogleNetworkingUtilities.framework */; };
+		E179A99B2221FC0700B73575 /* dummy.txt in Resources */ = {isa = PBXBuildFile; fileRef = E179A9542221FC0700B73575 /* dummy.txt */; };
+		E179A99D2221FC0700B73575 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9572221FC0700B73575 /* GoogleUtilities.framework */; };
+		E179A99F2221FC0700B73575 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9572221FC0700B73575 /* GoogleUtilities.framework */; };
+		E179A9A02221FC0700B73575 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9572221FC0700B73575 /* GoogleUtilities.framework */; };
+		E179A9A42221FC0700B73575 /* dummy.txt in Resources */ = {isa = PBXBuildFile; fileRef = E179A9592221FC0700B73575 /* dummy.txt */; };
+		E179A9A52221FC0700B73575 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A95C2221FC0700B73575 /* GoogleInterchangeUtilities.framework */; };
+		E179A9A72221FC0700B73575 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A95C2221FC0700B73575 /* GoogleInterchangeUtilities.framework */; };
+		E179A9A82221FC0700B73575 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A95C2221FC0700B73575 /* GoogleInterchangeUtilities.framework */; };
+		E179A9AA2221FC5700B73575 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9A92221FC5600B73575 /* AddressBook.framework */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
-		D90816A299B7423FA39E488A /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 322EF1E785394D51BDB36936 /* libRNCamera.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,13 +122,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 832C81801AAF6DEF007FA2F7;
 			remoteInfo = RCTVibration;
-		};
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = RNProject;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -176,20 +214,6 @@
 			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
 			remoteInfo = "double-conversion-tvOS";
 		};
-		2DF0FFEA2056DD460020B375 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9936F3131F5F2E4B0010BF04;
-			remoteInfo = privatedata;
-		};
-		2DF0FFEC2056DD460020B375 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
-			remoteInfo = "privatedata-tvOS";
-		};
 		3DAD3E831DF850E9000B6D8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
@@ -267,20 +291,6 @@
 			remoteGlobalIDString = 3D3CD9321DE5FBEE00167DC4;
 			remoteInfo = "cxxreact-tvOS";
 		};
-		3DAD3EAC1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3D3CD90B1DE5FBD600167DC4;
-			remoteInfo = jschelpers;
-		};
-		3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
-			remoteInfo = "jschelpers-tvOS";
-		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -316,6 +326,41 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		E179A91B2221F9DE00B73575 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EDEBC6D6214B3E7000DD5AC8;
+			remoteInfo = jsi;
+		};
+		E179A91D2221F9DE00B73575 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EDEBC73B214B45A300DD5AC8;
+			remoteInfo = jsiexecutor;
+		};
+		E179A91F2221F9DE00B73575 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED296FB6214C9A0900B7C4FE;
+			remoteInfo = "jsi-tvOS";
+		};
+		E179A9212221F9DE00B73575 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ED296FEE214C9CF800B7C4FE;
+			remoteInfo = "jsiexecutor-tvOS";
+		};
+		E179A9262221F9DF00B73575 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FC69E0D001945E7BCEA4D00 /* RNCamera.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4107012F1ACB723B00C6AA39;
+			remoteInfo = RNCamera;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -325,7 +370,6 @@
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* RNProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RNProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNProjectTests.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
@@ -341,33 +385,52 @@
 		2D02E47B1E0B4A5D006451C7 /* RNProject-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNProject-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RNProject-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNProject-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		322EF1E785394D51BDB36936 /* libRNCamera.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCamera.a; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8FC69E0D001945E7BCEA4D00 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		E179A9372221FC0700B73575 /* BCLlefteyeclosed_200.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = BCLlefteyeclosed_200.emd; sourceTree = "<group>"; };
+		E179A9382221FC0700B73575 /* BCLjoy_100.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = BCLjoy_100.emd; sourceTree = "<group>"; };
+		E179A9392221FC0700B73575 /* MFTprec_202.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = MFTprec_202.emd; sourceTree = "<group>"; };
+		E179A93A2221FC0700B73575 /* PFFprec_702.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = PFFprec_702.emd; sourceTree = "<group>"; };
+		E179A93B2221FC0700B73575 /* LMprec_600.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = LMprec_600.emd; sourceTree = "<group>"; };
+		E179A93C2221FC0700B73575 /* BCLrighteyeclosed_200.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = BCLrighteyeclosed_200.emd; sourceTree = "<group>"; };
+		E179A93F2221FC0700B73575 /* FaceDetector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaceDetector.framework; sourceTree = "<group>"; };
+		E179A9412221FC0700B73575 /* dummy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy.txt; sourceTree = "<group>"; };
+		E179A9442221FC0700B73575 /* GoogleMobileVision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileVision.framework; sourceTree = "<group>"; };
+		E179A9462221FC0700B73575 /* dummy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy.txt; sourceTree = "<group>"; };
+		E179A9492221FC0700B73575 /* GoogleMVDataOutput.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMVDataOutput.framework; sourceTree = "<group>"; };
+		E179A94B2221FC0700B73575 /* dummy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy.txt; sourceTree = "<group>"; };
+		E179A94D2221FC0700B73575 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		E179A94F2221FC0700B73575 /* dummy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy.txt; sourceTree = "<group>"; };
+		E179A9522221FC0700B73575 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		E179A9542221FC0700B73575 /* dummy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy.txt; sourceTree = "<group>"; };
+		E179A9572221FC0700B73575 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		E179A9592221FC0700B73575 /* dummy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy.txt; sourceTree = "<group>"; };
+		E179A95C2221FC0700B73575 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		E179A9A92221FC5600B73575 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		8FC69E0D001945E7BCEA4D00 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; name = "RNCamera.xcodeproj"; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		322EF1E785394D51BDB36936 /* libRNCamera.a */ = {isa = PBXFileReference; name = "libRNCamera.a"; path = "libRNCamera.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00E356EB1AD99517003FC87E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E179A9AA2221FC5700B73575 /* AddressBook.framework in Frameworks */,
+				E179A9A52221FC0700B73575 /* GoogleInterchangeUtilities.framework in Frameworks */,
+				E179A98D2221FC0700B73575 /* GoogleSymbolUtilities.framework in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
+				E179A9952221FC0700B73575 /* GoogleNetworkingUtilities.framework in Frameworks */,
+				E179A9752221FC0700B73575 /* FaceDetector.framework in Frameworks */,
+				E179A9852221FC0700B73575 /* GoogleMVDataOutput.framework in Frameworks */,
+				E179A97D2221FC0700B73575 /* GoogleMobileVision.framework in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
@@ -377,6 +440,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				E179A99D2221FC0700B73575 /* GoogleUtilities.framework in Frameworks */,
 				D90816A299B7423FA39E488A /* libRNCamera.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,14 +450,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */,
+				E179A9A72221FC0700B73575 /* GoogleInterchangeUtilities.framework in Frameworks */,
 				2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */,
 				2D02E4C21E0B4AEC006451C7 /* libRCTAnimation.a in Frameworks */,
+				E179A99F2221FC0700B73575 /* GoogleUtilities.framework in Frameworks */,
+				E179A9872221FC0700B73575 /* GoogleMVDataOutput.framework in Frameworks */,
+				E179A98F2221FC0700B73575 /* GoogleSymbolUtilities.framework in Frameworks */,
 				2D02E4C31E0B4AEC006451C7 /* libRCTImage-tvOS.a in Frameworks */,
 				2D02E4C41E0B4AEC006451C7 /* libRCTLinking-tvOS.a in Frameworks */,
 				2D02E4C51E0B4AEC006451C7 /* libRCTNetwork-tvOS.a in Frameworks */,
+				E179A9972221FC0700B73575 /* GoogleNetworkingUtilities.framework in Frameworks */,
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
+				E179A97F2221FC0700B73575 /* GoogleMobileVision.framework in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+				E179A9772221FC0700B73575 /* FaceDetector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +473,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */,
+				E179A9A82221FC0700B73575 /* GoogleInterchangeUtilities.framework in Frameworks */,
+				E179A9782221FC0700B73575 /* FaceDetector.framework in Frameworks */,
+				E179A9902221FC0700B73575 /* GoogleSymbolUtilities.framework in Frameworks */,
+				E179A9802221FC0700B73575 /* GoogleMobileVision.framework in Frameworks */,
+				E179A9982221FC0700B73575 /* GoogleNetworkingUtilities.framework in Frameworks */,
+				E179A9882221FC0700B73575 /* GoogleMVDataOutput.framework in Frameworks */,
+				E179A9A02221FC0700B73575 /* GoogleUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,16 +588,16 @@
 				3DAD3EA71DF850E9000B6D8A /* libyoga.a */,
 				3DAD3EA91DF850E9000B6D8A /* libcxxreact.a */,
 				3DAD3EAB1DF850E9000B6D8A /* libcxxreact.a */,
-				3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */,
-				3DAD3EAF1DF850E9000B6D8A /* libjschelpers.a */,
 				2DF0FFDF2056DD460020B375 /* libjsinspector.a */,
 				2DF0FFE12056DD460020B375 /* libjsinspector-tvOS.a */,
 				2DF0FFE32056DD460020B375 /* libthird-party.a */,
 				2DF0FFE52056DD460020B375 /* libthird-party.a */,
 				2DF0FFE72056DD460020B375 /* libdouble-conversion.a */,
 				2DF0FFE92056DD460020B375 /* libdouble-conversion.a */,
-				2DF0FFEB2056DD460020B375 /* libprivatedata.a */,
-				2DF0FFED2056DD460020B375 /* libprivatedata-tvOS.a */,
+				E179A91C2221F9DE00B73575 /* libjsi.a */,
+				E179A91E2221F9DE00B73575 /* libjsiexecutor.a */,
+				E179A9202221F9DE00B73575 /* libjsi-tvOS.a */,
+				E179A9222221F9DE00B73575 /* libjsiexecutor-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -527,6 +605,12 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E179A9A92221FC5600B73575 /* AddressBook.framework */,
+				E179A94A2221FC0700B73575 /* dbffca986f6337f8-GoogleSymbolUtilities-1.1.1 */,
+				E179A9582221FC0700B73575 /* GoogleInterchangeUtilities-1.2.2 */,
+				E179A9342221FC0700B73575 /* GoogleMobileVision-1.1.0 */,
+				E179A94E2221FC0700B73575 /* GoogleNetworkingUtilities-1.2.2 */,
+				E179A9532221FC0700B73575 /* GoogleUtilities-1.3.2 */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
@@ -589,6 +673,7 @@
 				00E356EF1AD99517003FC87E /* RNProjectTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				E179A8F52221F9DA00B73575 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -599,7 +684,6 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* RNProject.app */,
-				00E356EE1AD99517003FC87E /* RNProjectTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* RNProject-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* RNProject-tvOSTests.xctest */,
 			);
@@ -615,27 +699,215 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E179A8F52221F9DA00B73575 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				322EF1E785394D51BDB36936 /* libRNCamera.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		E179A9232221F9DE00B73575 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9272221F9DF00B73575 /* libRNCamera.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E179A9342221FC0700B73575 /* GoogleMobileVision-1.1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9352221FC0700B73575 /* FaceDetector */,
+				E179A9402221FC0700B73575 /* Detector */,
+				E179A9452221FC0700B73575 /* MVDataOutput */,
+			);
+			path = "GoogleMobileVision-1.1.0";
+			sourceTree = "<group>";
+		};
+		E179A9352221FC0700B73575 /* FaceDetector */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9362221FC0700B73575 /* Resources */,
+				E179A93D2221FC0700B73575 /* Frameworks */,
+			);
+			path = FaceDetector;
+			sourceTree = "<group>";
+		};
+		E179A9362221FC0700B73575 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9372221FC0700B73575 /* BCLlefteyeclosed_200.emd */,
+				E179A9382221FC0700B73575 /* BCLjoy_100.emd */,
+				E179A9392221FC0700B73575 /* MFTprec_202.emd */,
+				E179A93A2221FC0700B73575 /* PFFprec_702.emd */,
+				E179A93B2221FC0700B73575 /* LMprec_600.emd */,
+				E179A93C2221FC0700B73575 /* BCLrighteyeclosed_200.emd */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E179A93D2221FC0700B73575 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E179A93E2221FC0700B73575 /* frameworks */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E179A93E2221FC0700B73575 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E179A93F2221FC0700B73575 /* FaceDetector.framework */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		E179A9402221FC0700B73575 /* Detector */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9412221FC0700B73575 /* dummy.txt */,
+				E179A9422221FC0700B73575 /* Frameworks */,
+			);
+			path = Detector;
+			sourceTree = "<group>";
+		};
+		E179A9422221FC0700B73575 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9432221FC0700B73575 /* frameworks */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E179A9432221FC0700B73575 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9442221FC0700B73575 /* GoogleMobileVision.framework */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		E179A9452221FC0700B73575 /* MVDataOutput */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9462221FC0700B73575 /* dummy.txt */,
+				E179A9472221FC0700B73575 /* Frameworks */,
+			);
+			path = MVDataOutput;
+			sourceTree = "<group>";
+		};
+		E179A9472221FC0700B73575 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9482221FC0700B73575 /* frameworks */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E179A9482221FC0700B73575 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9492221FC0700B73575 /* GoogleMVDataOutput.framework */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		E179A94A2221FC0700B73575 /* dbffca986f6337f8-GoogleSymbolUtilities-1.1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				E179A94B2221FC0700B73575 /* dummy.txt */,
+				E179A94C2221FC0700B73575 /* Frameworks */,
+			);
+			path = "dbffca986f6337f8-GoogleSymbolUtilities-1.1.1";
+			sourceTree = "<group>";
+		};
+		E179A94C2221FC0700B73575 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E179A94D2221FC0700B73575 /* GoogleSymbolUtilities.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E179A94E2221FC0700B73575 /* GoogleNetworkingUtilities-1.2.2 */ = {
+			isa = PBXGroup;
+			children = (
+				E179A94F2221FC0700B73575 /* dummy.txt */,
+				E179A9502221FC0700B73575 /* Frameworks */,
+			);
+			path = "GoogleNetworkingUtilities-1.2.2";
+			sourceTree = "<group>";
+		};
+		E179A9502221FC0700B73575 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9512221FC0700B73575 /* frameworks */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E179A9512221FC0700B73575 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9522221FC0700B73575 /* GoogleNetworkingUtilities.framework */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		E179A9532221FC0700B73575 /* GoogleUtilities-1.3.2 */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9542221FC0700B73575 /* dummy.txt */,
+				E179A9552221FC0700B73575 /* Frameworks */,
+			);
+			path = "GoogleUtilities-1.3.2";
+			sourceTree = "<group>";
+		};
+		E179A9552221FC0700B73575 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9562221FC0700B73575 /* frameworks */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E179A9562221FC0700B73575 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9572221FC0700B73575 /* GoogleUtilities.framework */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		E179A9582221FC0700B73575 /* GoogleInterchangeUtilities-1.2.2 */ = {
+			isa = PBXGroup;
+			children = (
+				E179A9592221FC0700B73575 /* dummy.txt */,
+				E179A95A2221FC0700B73575 /* Frameworks */,
+			);
+			path = "GoogleInterchangeUtilities-1.2.2";
+			sourceTree = "<group>";
+		};
+		E179A95A2221FC0700B73575 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E179A95B2221FC0700B73575 /* frameworks */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E179A95B2221FC0700B73575 /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E179A95C2221FC0700B73575 /* GoogleInterchangeUtilities.framework */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* RNProjectTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RNProjectTests" */;
-			buildPhases = (
-				00E356EA1AD99517003FC87E /* Sources */,
-				00E356EB1AD99517003FC87E /* Frameworks */,
-				00E356EC1AD99517003FC87E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00E356F51AD99517003FC87E /* PBXTargetDependency */,
-			);
-			name = RNProjectTests;
-			productName = RNProjectTests;
-			productReference = 00E356EE1AD99517003FC87E /* RNProjectTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		13B07F861A680F5B00A75B9A /* RNProject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RNProject" */;
@@ -699,9 +971,8 @@
 				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
-					00E356ED1AD99517003FC87E = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 13B07F861A680F5B00A75B9A;
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = F2TAEZM878;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -774,11 +1045,14 @@
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
+				{
+					ProductGroup = E179A9232221F9DE00B73575 /* Products */;
+					ProjectRef = 8FC69E0D001945E7BCEA4D00 /* RNCamera.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* RNProject */,
-				00E356ED1AD99517003FC87E /* RNProjectTests */,
 				2D02E47A1E0B4A5D006451C7 /* RNProject-tvOS */,
 				2D02E48F1E0B4A5D006451C7 /* RNProject-tvOSTests */,
 			);
@@ -905,20 +1179,6 @@
 			remoteRef = 2DF0FFE82056DD460020B375 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2DF0FFEB2056DD460020B375 /* libprivatedata.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libprivatedata.a;
-			remoteRef = 2DF0FFEA2056DD460020B375 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2DF0FFED2056DD460020B375 /* libprivatedata-tvOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libprivatedata-tvOS.a";
-			remoteRef = 2DF0FFEC2056DD460020B375 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -996,20 +1256,6 @@
 			remoteRef = 3DAD3EAA1DF850E9000B6D8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libjschelpers.a;
-			remoteRef = 3DAD3EAC1DF850E9000B6D8A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3DAD3EAF1DF850E9000B6D8A /* libjschelpers.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libjschelpers.a;
-			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1045,21 +1291,56 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		E179A91C2221F9DE00B73575 /* libjsi.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsi.a;
+			remoteRef = E179A91B2221F9DE00B73575 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E179A91E2221F9DE00B73575 /* libjsiexecutor.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsiexecutor.a;
+			remoteRef = E179A91D2221F9DE00B73575 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E179A9202221F9DE00B73575 /* libjsi-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsi-tvOS.a";
+			remoteRef = E179A91F2221F9DE00B73575 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E179A9222221F9DE00B73575 /* libjsiexecutor-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsiexecutor-tvOS.a";
+			remoteRef = E179A9212221F9DE00B73575 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E179A9272221F9DF00B73575 /* libRNCamera.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCamera.a;
+			remoteRef = E179A9262221F9DF00B73575 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E179A9652221FC0700B73575 /* MFTprec_202.emd in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				E179A9712221FC0700B73575 /* BCLrighteyeclosed_200.emd in Resources */,
+				E179A9612221FC0700B73575 /* BCLjoy_100.emd in Resources */,
+				E179A96D2221FC0700B73575 /* LMprec_600.emd in Resources */,
+				E179A9692221FC0700B73575 /* PFFprec_702.emd in Resources */,
+				E179A95D2221FC0700B73575 /* BCLlefteyeclosed_200.emd in Resources */,
+				E179A9792221FC0700B73575 /* dummy.txt in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1068,7 +1349,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E179A9632221FC0700B73575 /* BCLjoy_100.emd in Resources */,
+				E179A96B2221FC0700B73575 /* PFFprec_702.emd in Resources */,
+				E179A95F2221FC0700B73575 /* BCLlefteyeclosed_200.emd in Resources */,
+				E179A97B2221FC0700B73575 /* dummy.txt in Resources */,
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+				E179A9732221FC0700B73575 /* BCLrighteyeclosed_200.emd in Resources */,
+				E179A96F2221FC0700B73575 /* LMprec_600.emd in Resources */,
+				E179A99B2221FC0700B73575 /* dummy.txt in Resources */,
+				E179A9672221FC0700B73575 /* MFTprec_202.emd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1076,6 +1365,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E179A97C2221FC0700B73575 /* dummy.txt in Resources */,
+				E179A9702221FC0700B73575 /* LMprec_600.emd in Resources */,
+				E179A9602221FC0700B73575 /* BCLlefteyeclosed_200.emd in Resources */,
+				E179A9842221FC0700B73575 /* dummy.txt in Resources */,
+				E179A9742221FC0700B73575 /* BCLrighteyeclosed_200.emd in Resources */,
+				E179A96C2221FC0700B73575 /* PFFprec_702.emd in Resources */,
+				E179A9682221FC0700B73575 /* MFTprec_202.emd in Resources */,
+				E179A9A42221FC0700B73575 /* dummy.txt in Resources */,
+				E179A9642221FC0700B73575 /* BCLjoy_100.emd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1113,14 +1411,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		00E356EA1AD99517003FC87E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00E356F31AD99517003FC87E /* RNProjectTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F871A680F5B00A75B9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1150,11 +1440,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* RNProject */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2D02E47A1E0B4A5D006451C7 /* RNProject-tvOS */;
@@ -1175,81 +1460,39 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		00E356F61AD99517003FC87E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RNProjectTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNProject.app/RNProject";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
-				);
-			};
-			name = Debug;
-		};
-		00E356F71AD99517003FC87E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = RNProjectTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNProject.app/RNProject";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
-				);
-			};
-			name = Release;
-		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = F2TAEZM878;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/FaceDetector/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/Detector/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/MVDataOutput/Frameworks/frameworks",
+					"$(PROJECT_DIR)/dbffca986f6337f8-GoogleSymbolUtilities-1.1.1/Frameworks",
+					"$(PROJECT_DIR)/GoogleNetworkingUtilities-1.2.2/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleUtilities-1.3.2/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleInterchangeUtilities-1.2.2/Frameworks/frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+				);
 				INFOPLIST_FILE = RNProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
+					"-lz",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.RNProjectA;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)Extension";
 				PRODUCT_NAME = RNProject;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
-				);
 			};
 			name = Debug;
 		};
@@ -1258,20 +1501,33 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F2TAEZM878;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/FaceDetector/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/Detector/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/MVDataOutput/Frameworks/frameworks",
+					"$(PROJECT_DIR)/dbffca986f6337f8-GoogleSymbolUtilities-1.1.1/Frameworks",
+					"$(PROJECT_DIR)/GoogleNetworkingUtilities-1.2.2/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleUtilities-1.3.2/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleInterchangeUtilities-1.2.2/Frameworks/frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+				);
 				INFOPLIST_FILE = RNProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
+					"-lz",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.RNProjectA;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)Extension";
 				PRODUCT_NAME = RNProject;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
-				);
 			};
 			name = Release;
 		};
@@ -1286,9 +1542,27 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/FaceDetector/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/Detector/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/MVDataOutput/Frameworks/frameworks",
+					"$(PROJECT_DIR)/dbffca986f6337f8-GoogleSymbolUtilities-1.1.1/Frameworks",
+					"$(PROJECT_DIR)/GoogleNetworkingUtilities-1.2.2/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleUtilities-1.3.2/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleInterchangeUtilities-1.2.2/Frameworks/frameworks",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+				);
 				INFOPLIST_FILE = "RNProject-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1298,14 +1572,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
-				);
 			};
 			name = Debug;
 		};
@@ -1320,9 +1586,27 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/FaceDetector/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/Detector/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/MVDataOutput/Frameworks/frameworks",
+					"$(PROJECT_DIR)/dbffca986f6337f8-GoogleSymbolUtilities-1.1.1/Frameworks",
+					"$(PROJECT_DIR)/GoogleNetworkingUtilities-1.2.2/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleUtilities-1.3.2/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleInterchangeUtilities-1.2.2/Frameworks/frameworks",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+				);
 				INFOPLIST_FILE = "RNProject-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1332,14 +1616,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
-				);
 			};
 			name = Release;
 		};
@@ -1353,9 +1629,27 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/FaceDetector/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/Detector/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/MVDataOutput/Frameworks/frameworks",
+					"$(PROJECT_DIR)/dbffca986f6337f8-GoogleSymbolUtilities-1.1.1/Frameworks",
+					"$(PROJECT_DIR)/GoogleNetworkingUtilities-1.2.2/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleUtilities-1.3.2/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleInterchangeUtilities-1.2.2/Frameworks/frameworks",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+				);
 				INFOPLIST_FILE = "RNProject-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1365,14 +1659,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNProject-tvOS.app/RNProject-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
-				);
 			};
 			name = Debug;
 		};
@@ -1386,9 +1672,27 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/FaceDetector/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/Detector/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleMobileVision-1.1.0/MVDataOutput/Frameworks/frameworks",
+					"$(PROJECT_DIR)/dbffca986f6337f8-GoogleSymbolUtilities-1.1.1/Frameworks",
+					"$(PROJECT_DIR)/GoogleNetworkingUtilities-1.2.2/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleUtilities-1.3.2/Frameworks/frameworks",
+					"$(PROJECT_DIR)/GoogleInterchangeUtilities-1.2.2/Frameworks/frameworks",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+				);
 				INFOPLIST_FILE = "RNProject-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1398,14 +1702,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNProject-tvOS.app/RNProject-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
-				);
 			};
 			name = Release;
 		};
@@ -1458,6 +1754,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)A";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1503,6 +1800,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)A";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1511,15 +1809,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "RNProjectTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00E356F61AD99517003FC87E /* Debug */,
-				00E356F71AD99517003FC87E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "RNProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
