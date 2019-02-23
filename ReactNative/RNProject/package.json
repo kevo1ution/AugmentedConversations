@@ -7,8 +7,13 @@
     "test": "jest"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
+    "native-base": "^2.10.0",
     "react": "16.6.3",
-    "react-native": "0.58.5"
+    "react-native": "0.58.1",
+    "react-native-camera": "^1.9.2",
+    "react-native-fs": "^2.13.3",
+    "react-native-router-flux": "^4.0.6"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",
