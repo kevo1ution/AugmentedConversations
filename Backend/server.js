@@ -74,7 +74,6 @@ rek.getFaceId(dat, (succ, faceid)=>{
         privacy: 0, //0- everyone can see, 1- friends only, 2- everyone can see the person
     });
 });
-*/
 
 //adding andy
 var dat = fs.readFileSync('./pics/andy.png');
@@ -101,6 +100,7 @@ rek.addFace(dat, (succ, faceid)=>{
         privacy: 0, //0- everyone can see, 1- friends only, 2- everyone can see the person
     });
 });
+*/
 
 //cleanup
 const cleanup = require('./cleanup.js');
