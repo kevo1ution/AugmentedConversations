@@ -12,7 +12,7 @@ class Home extends Component {
                     style={{flex:1, backgroundColor: "yellow", justifyContent: "center"}}
                     onPress={() => Actions.camera()}
                 >
-                    <Text> Click to go Next </Text> 
+                    <Text> Click to go Next </Text>
                 </TouchableHighlight>
             </View>
         );
