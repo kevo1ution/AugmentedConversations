@@ -23,7 +23,9 @@ app.post('/image', function(req, res){
         //get data from mongodb with faceid
         if(succ){
             database.getPersonByFaceId(faceid, (docs)=>{
+                console.log(docs);
                 res.json(docs);
+
             });
         }else{
 
