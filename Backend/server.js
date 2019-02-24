@@ -34,6 +34,11 @@ app.post('/image', function(req, res){
     });
 });
 
+//update user privacy
+app.post('/update/privacy', function(req,res){
+    database.updatePerson(req.body.faceId, {"privacy":req.body.privacy}, ()=>{});
+});
+
 app.get('/', function(req,res){
     console.log("Get request");
     res.send("hello");
@@ -43,43 +48,8 @@ app.listen(8000, ()=>{
     console.log('listening on 8000');
 });
 
-/*process image function
-function processImage(req, res){
-    //get the buffer, convert image to base 64
-    //var buff = new Buffer(req.body.image, 'base64');
-    //var tempId = uuid();
-    //fs.writeFileSync('./pics/' + tempId + '.png', buff);
-    //var dat = fs.readFileSync('./pics/' + tempId + '.png');
-    var dat = fs.readFileSync('./pics/test' + res + '.png');
-
-}
-
-function addFace(prefix, id){
-    var dat = fs.readFileSync('./pics/' + prefix + id + '.png');
-    rek.addFace(dat, (succ, data)=>{
-        
-    });
-}
-
-function searchFace(prefix, id){
-    var dat = fs.readFileSync('./pics/' + prefix + id + '.png');
-    rek.getFaceId(dat, (succ, FaceInfo)=>{
-
-    });
-}
-
-searchFace(1);
-searchFace(2);
-searchFace(3);
-searchFace(4);
-searchFace(5);
-*/
-
-//searchFace("test", 2);
-//dtrump: c2328e2a-566d-4c2f-8011-4339c233b291
-//hclinton: c5af267f-1f70-41a7-842b-f379208a3f12
-
-/*add kevin
+/*
+//add kevin
 var dat = fs.readFileSync('./pics/kevin.png');
 rek.getFaceId(dat, (succ, faceid)=>{
     database.addPerson({
@@ -92,6 +62,7 @@ rek.getFaceId(dat, (succ, faceid)=>{
     });
 });
 
+//add yamen
 dat = fs.readFileSync('./pics/yamen.png');
 rek.getFaceId(dat, (succ, faceid)=>{
     database.addPerson({
@@ -105,6 +76,31 @@ rek.getFaceId(dat, (succ, faceid)=>{
 });
 */
 
+//adding andy
+var dat = fs.readFileSync('./pics/andy.png');
+rek.addFace(dat, (succ, faceid)=>{
+    database.addPerson({
+        name: "Andy", //Full name of person       
+        faceId: faceid, //Corresponding face id with rekognition
+        bio: "I am tall", //Short biography of the person
+        friends: [], //friends list with face id
+        interests: ["fashion"],
+        privacy: 0, //0- everyone can see, 1- friends only, 2- everyone can see the person
+    });
+});
+
+//add aman
+dat = fs.readFileSync('./pics/aman.png');
+rek.addFace(dat, (succ, faceid)=>{
+    database.addPerson({
+        name: "Aman", //Full name of person       
+        faceId: faceid, //Corresponding face id with rekognition
+        bio: "I like pokemon", //Short biography of the person
+        friends: [], //friends list with face id
+        interests: ["pokemon go"],
+        privacy: 0, //0- everyone can see, 1- friends only, 2- everyone can see the person
+    });
+});
 
 //cleanup
 const cleanup = require('./cleanup.js');

@@ -8,35 +8,7 @@ var dbo;
 
 client.connect(function(err){
 	//open update database
-	dbo = client.db("mydb");
-
-	/*testing stuff
-	addUser({
-		username: "kevin",
-		password: "pass",
-		prefArr: ['pref1', 'pref2', 'pref3']
-	});
-	*/
-	
-	/*
-	addNP("", {name: "", item: "" })
-	*/
-	/*
-	dbo.collection("NP").insertMany(
-		[{name: "TEXAS WOMENS FOUNDATION", item: "water bottle"},
-		{name: "Young Women's Preparatory Network", item: "water bottle"},
-		{name: "Women In Need of Generous Support", item: "clothes"},
-		{name: "Womens Foodservice Forum", item: "clothes"},
-		{name: "H.I.S. BRIDGEBUILDERS", item: "water bottle"},
-		{name: "SKILL QUEST", item: "clothes"},
-		{name: "Inclusive Communities Housing Development Corporation", item: "water bottle"},
-		{name: "GREEN CAREERS DALLAS", item: "clothes"},
-		{name: "H.I.S. BRIDGEBUILDERS", item: "clothes"},
-		{name: "SKILL QUEST", item: "clothes"},
-		{name: "Inclusive Communities Housing Development Corporation", item: "water bottle"},
-		{name: "GREEN CAREERS DALLAS", item: "water bottle"}]
-	);
-	*/	
+	dbo = client.db("mydb");	
 });
 
 //non profit information
@@ -50,7 +22,18 @@ function addPerson(table){
 		friends: ["id1", "id2", "id3"], //friends list with face id
 		interests: [], //array of interests
         privacy: 0-2, //0- everyone can see, 1- friends only, 2- everyone can see the person
-    }
+	}
+	list of possible interests:
+	1. Animals
+	2. Architecture
+	3. Cars
+	4. Art
+	5. Fashion
+	6. Sports
+	7. Technology
+	8. Science
+	9. Nonprofits
+	10. 
     */
 
 	dbo.collection("People").insertOne(table, function(err, res){
@@ -61,8 +44,8 @@ function addPerson(table){
 }
 
 //update the info of the person
-function updatePerson(table, callback){
-	dbo.collection("People").updateOne({'faceId': table.faceId}, 
+function updatePerson(faceId, table, callback){
+	dbo.collection("People").updateOne({'faceId': faceId}, 
 		{ $set: table },
 		{upsert: true}
 	);
@@ -93,6 +76,16 @@ function addContact(){
 //utility
 function closeDB(){
 	client.close(); //close out the database
+}
+
+function changePrivacy(name, newPrivacy){
+	dbo.collection("People").find({'name': name}).toArray(function(err,docs){
+        if(err){
+            console.log(err);
+        }else{
+            
+        }
+	});
 }
 
 module.exports = {
