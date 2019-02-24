@@ -26,10 +26,10 @@ app.post('/image', function(req, res){
             database.getPersonByFaceId(faceid, (docs)=>{
                 console.log(docs);
                 res.json(docs);
-
             });
         }else{
             console.log("unsuccessful");
+            res.json({});
         }
     });
 });
