@@ -59,7 +59,8 @@ export default class CameraScreen extends React.Component {
     p7: 0,
     p8: 0,
     p9: 0,
-    p10: 0
+    p10: 0,
+    polyToggle: true
   };
   componentWillMount() {
     this.takePicture();
@@ -126,11 +127,11 @@ export default class CameraScreen extends React.Component {
     if (this.state.headHeight == 0) return;
     return (
     <Rect
-        x={this.state.originX}
+        x={this.state.originX+this.state.headWidth}
         y={this.state.originY}
         width="150"
-        height="50"
-        fill="rgb(0,0,255)"
+        height="250"
+        fill="rgba(100,100,100, .8)"
         strokeWidth="3"
         stroke="rgb(0,0,0)"
     />
@@ -163,7 +164,7 @@ export default class CameraScreen extends React.Component {
   };
 
   renderPolygons() {
-    if (this.state.p1 == 0 && this.state.p5 == 0) return;
+    if (this.state.p1 == 0 && this.state.p5 == 0 || !this.state.polyToggle) return;
     return (
       <Svg
       width="100%"
@@ -224,7 +225,7 @@ export default class CameraScreen extends React.Component {
         fill="transparent"
     >
       <Polygon
-        points={this.state.p8.toString() + " " + this.state.p4.toString() + " " + this.state.p9.toString()}
+        points={this.state.p7.toString() + " " + this.state.p3.toString() + " " + this.state.p9.toString()}
         fill="transparent"
         stroke="white"
         strokeWidth="1"
@@ -236,7 +237,7 @@ export default class CameraScreen extends React.Component {
         fill="transparent"
     >
       <Polygon
-        points={this.state.p4.toString() + " " + this.state.p8.toString() + " " + this.state.p10.toString()}
+        points={this.state.p7.toString() + " " + this.state.p3.toString() + " " + this.state.p10.toString()}
         fill="transparent"
         stroke="white"
         strokeWidth="1"
@@ -244,6 +245,13 @@ export default class CameraScreen extends React.Component {
     </Svg>
     </Svg>
     );
+  }
+
+  togglePoly() {
+    this.setState({polyToggle: !this.state.polyToggle})
+    if (this.state.polyToggle) setTimeout(togglePoly, 500)
+    else setTimeout(togglePoly, 1500)
+    
   }
 
   renderCamera() {
