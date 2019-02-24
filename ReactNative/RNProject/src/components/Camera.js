@@ -44,25 +44,22 @@ export default class CameraScreen extends React.Component {
     type: 'back',
     whiteBalance: 'auto',
     ratio: '16:9',
-    recordOptions: {
-      mute: false,
-      maxDuration: 5,
-      quality: RNCamera.Constants.VideoQuality['288p'],
-    },
     isRecording: false,
-    dots: [],
+    dots: []
   };
 
   setLandmarks(fObj) {
+    return;
     var currDots = [];
     console.log(fObj);
     if (fObj.faces.length == 0){
       this.setState({dots: currDots});
       return;
     } 
+    return;
     let landmarks = fObj.faces[0].getLandmarks();
     console.log(landmarks);
-    for (let i = 0; i < landmarks.size(); i++) {
+    for (let i = 0; i < landmarks.length; i++) {
       let point = landmarks[i].getPosition();
       console.log(point);
       currDots.push({x: point.x, y: point.y});
@@ -83,7 +80,7 @@ export default class CameraScreen extends React.Component {
         faceDetectorSettings={{
           mode: RNCamera.Constants.FaceDetection.Mode.accurate,
         }}
-        faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
+        //faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
 
         type={this.state.type}
         flashMode={this.state.flash}
