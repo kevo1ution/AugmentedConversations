@@ -107,7 +107,6 @@ export default class CameraScreen extends React.Component {
           />
       )
     })
-    console.log(dotList)
     return (
     <View 
       style={styles.container}
@@ -116,7 +115,8 @@ export default class CameraScreen extends React.Component {
     <Svg
       width="100%"
       height="100%">
-      {dotList}
+    >
+    {dotList}
     </Svg>
     </View>
     );}
