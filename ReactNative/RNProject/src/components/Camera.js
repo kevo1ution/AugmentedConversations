@@ -45,7 +45,21 @@ export default class CameraScreen extends React.Component {
     whiteBalance: 'auto',
     ratio: '16:9',
     isRecording: false,
-    dots: []
+    dots: [],
+    headHeight: 0,
+    headWidth: 0,
+    originX: 0,
+    originY: 0,
+    p1: 0,
+    p2: 0,
+    p3: 0,
+    p4: 0,
+    p5: 0,
+    p6: 0,
+    p7: 0,
+    p8: 0,
+    p9: 0,
+    p10: 0
   };
   componentWillMount() {
     this.takePicture();
@@ -61,7 +75,23 @@ export default class CameraScreen extends React.Component {
     var currDots = [];
     if (fObj.faces.length == 0){
       console.log("No Face!");
-      this.setState({dots: currDots});
+      this.setState({
+        dots: currDots,
+        headHeight: 0,
+        headWidth: 0,
+        originX: 0,
+        originY: 0,
+        p1: 0,
+        p2: 0,
+        p3: 0,
+        p4: 0,
+        p5: 0,
+        p6: 0,
+        p7: 0,
+        p8: 0,
+        p9: 0,
+        p10: 0
+      });
       return;
     } 
     fObjKeys = Object.keys(fObj.faces[0]);
@@ -71,7 +101,40 @@ export default class CameraScreen extends React.Component {
         currDots.push({x: val.x, y: val.y});
       }
     }
-    this.setState({dots: currDots});
+    const points = fObj.faces[0];
+    this.setState({
+      dots: currDots,
+      headHeight: fObj.faces[0].bounds.size.height,
+      headWidth: fObj.faces[0].bounds.size.width,
+      originX: fObj.faces[0].bounds.origin.x,
+      originY: fObj.faces[0].bounds.origin.y,
+      p1: [points.leftEarPosition.x, points.leftEarPosition.y],
+      p2: [points.leftEyePosition.x, points.leftEyePosition.y],
+      p3: [points.leftMouthPosition.x, points.leftMouthPosition.y],
+      p4: [points.leftCheekPosition.x, points.leftCheekPosition.y],
+      p5: [points.rightEarPosition.x, points.rightEarPosition.y],
+      p6: [points.rightEyePosition.x, points.rightEyePosition.y],
+      p7: [points.rightMouthPosition.x, points.rightMouthPosition.y],
+      p8: [points.rightCheekPosition.x, points.rightCheekPosition.y],
+      p9: [points.noseBasePosition.x, points.noseBasePosition.y],
+      p10: [points.bottomMouthPosition.x, points.bottomMouthPosition.y]
+
+    });
+  }
+
+  renderText() {
+    if (this.state.headHeight == 0) return;
+    return (
+    <Rect
+        x={this.state.originX}
+        y={this.state.originY}
+        width="150"
+        height="50"
+        fill="rgb(0,0,255)"
+        strokeWidth="3"
+        stroke="rgb(0,0,0)"
+    />
+    )
   }
 
   takePicture = async function() {
@@ -98,6 +161,90 @@ export default class CameraScreen extends React.Component {
     }
     setTimeout(this.takePicture.bind(this), 1000);
   };
+
+  renderPolygons() {
+    if (this.state.p1 == 0 && this.state.p5 == 0) return;
+    return (
+      <Svg
+      width="100%"
+      height="100%"
+      fill="transparent"
+      >
+    <Svg
+    width="100%"
+    height="100%"
+    fill="transparent"
+    >
+      <Polygon
+        points={this.state.p1.toString() + " " + this.state.p2.toString() + " " + this.state.p3.toString()}
+        fill="transparent"
+        stroke="white"
+        strokeWidth="1"
+      />
+    </Svg>
+    <Svg
+        width="100%"
+        height="100%"
+        fill="transparent"
+    >
+      <Polygon
+        points={this.state.p1.toString() + " " + this.state.p2.toString() + " " + this.state.p4.toString()}
+        fill="transparent"
+        stroke="white"
+        strokeWidth="1"
+      />
+    </Svg>
+    <Svg
+        width="100%"
+        height="100%"
+        fill="transparent"
+    >
+      <Polygon
+        points={this.state.p5.toString() + " " + this.state.p6.toString() + " " + this.state.p7.toString()}
+        fill="transparent"
+        stroke="white"
+        strokeWidth="1"
+      />
+    </Svg>
+    <Svg
+        width="100%"
+        height="100%"
+        fill="transparent"
+    >
+      <Polygon
+        points={this.state.p5.toString() + " " + this.state.p6.toString() + " " + this.state.p8.toString()}
+        fill="transparent"
+        stroke="white"
+        strokeWidth="1"
+      />
+    </Svg>
+    <Svg
+        width="100%"
+        height="100%"
+        fill="transparent"
+    >
+      <Polygon
+        points={this.state.p8.toString() + " " + this.state.p4.toString() + " " + this.state.p9.toString()}
+        fill="transparent"
+        stroke="white"
+        strokeWidth="1"
+      />
+    </Svg>
+    <Svg
+        width="100%"
+        height="100%"
+        fill="transparent"
+    >
+      <Polygon
+        points={this.state.p4.toString() + " " + this.state.p8.toString() + " " + this.state.p10.toString()}
+        fill="transparent"
+        stroke="white"
+        strokeWidth="1"
+      />
+    </Svg>
+    </Svg>
+    );
+  }
 
   renderCamera() {
     const dotList = this.state.dots.map((data) => {
@@ -155,6 +302,14 @@ export default class CameraScreen extends React.Component {
             fill="transparent"
           >
             {dotList}
+            <Svg
+                width="100%"
+                height="100%"
+                fill="transparent"
+            >
+            {this.renderText()}
+            </Svg>
+            {this.renderPolygons()}
           </Svg>
         </View>
       </RNCamera>
