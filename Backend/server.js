@@ -71,9 +71,9 @@ searchFace(5);
 //dtrump: c2328e2a-566d-4c2f-8011-4339c233b291
 //hclinton: c5af267f-1f70-41a7-842b-f379208a3f12
 
-/*add kevin
+//add kevin
 var dat = fs.readFileSync('./pics/kevin.png');
-rek.addFace(dat, (succ, faceid)=>{
+rek.getFaceId(dat, (succ, faceid)=>{
     database.addPerson({
         name: "Kevin Tang", //Full name of person       
         faceId: faceid, //Corresponding face id with rekognition
@@ -85,7 +85,7 @@ rek.addFace(dat, (succ, faceid)=>{
 });
 
 dat = fs.readFileSync('./pics/yamen.png');
-rek.addFace(dat, (succ, faceid)=>{
+rek.getFaceId(dat, (succ, faceid)=>{
     database.addPerson({
         name: "Yamen", //Full name of person       
         faceId: faceid, //Corresponding face id with rekognition
@@ -95,7 +95,7 @@ rek.addFace(dat, (succ, faceid)=>{
         privacy: 0, //0- everyone can see, 1- friends only, 2- everyone can see the person
     });
 });
-*/
+
 
 //cleanup
 const cleanup = require('./cleanup.js');
