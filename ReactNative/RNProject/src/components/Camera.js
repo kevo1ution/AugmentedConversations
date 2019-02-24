@@ -2,7 +2,22 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Slider } from 'react-native';
 // eslint-disable-next-line import/no-unresolved
-import { RNCamera } from 'react-native-camera';
+import { RNCamera, FaceDetector } from 'react-native-camera';
+import Svg, {
+  Circle,
+  Ellipse,
+  G,
+  LinearGradient,
+  RadialGradient,
+  Line,
+  Path,
+  Polygon,
+  Polyline,
+  Rect,
+  Symbol,
+  Use,
+  Defs,
+  Stop} from 'react-native-svg';
 
 const flashModeOrder = {
   off: 'on',
@@ -35,73 +50,25 @@ export default class CameraScreen extends React.Component {
       quality: RNCamera.Constants.VideoQuality['288p'],
     },
     isRecording: false,
+    dots: [],
   };
 
-  toggleFacing() {
-    this.setState({
-      type: this.state.type === 'back' ? 'front' : 'back',
-    });
-  }
-
-  toggleFlash() {
-    this.setState({
-      flash: flashModeOrder[this.state.flash],
-    });
-  }
-
-  toggleWB() {
-    this.setState({
-      whiteBalance: wbOrder[this.state.whiteBalance],
-    });
-  }
-
-  toggleFocus() {
-    this.setState({
-      autoFocus: this.state.autoFocus === 'on' ? 'off' : 'on',
-    });
-  }
-
-  zoomOut() {
-    this.setState({
-      zoom: this.state.zoom - 0.1 < 0 ? 0 : this.state.zoom - 0.1,
-    });
-  }
-
-  zoomIn() {
-    this.setState({
-      zoom: this.state.zoom + 0.1 > 1 ? 1 : this.state.zoom + 0.1,
-    });
-  }
-
-  setFocusDepth(depth) {
-    this.setState({
-      depth,
-    });
-  }
-
-  takePicture = async function() {
-    if (this.camera) {
-      const data = await this.camera.takePictureAsync();
-      console.warn('takePicture ', data);
+  setLandmarks(fObj) {
+    var currDots = [];
+    console.log(fObj);
+    if (fObj.faces.length == 0){
+      this.setState({dots: currDots});
+      return;
+    } 
+    let landmarks = fObj.faces[0].getLandmarks();
+    console.log(landmarks);
+    for (let i = 0; i < landmarks.size(); i++) {
+      let point = landmarks[i].getPosition();
+      console.log(point);
+      currDots.push({x: point.x, y: point.y});
     }
-  };
-
-  takeVideo = async function() {
-    if (this.camera) {
-      try {
-        const promise = this.camera.recordAsync(this.state.recordOptions);
-
-        if (promise) {
-          this.setState({ isRecording: true });
-          const data = await promise;
-          this.setState({ isRecording: false });
-          console.warn('takeVideo', data);
-        }
-      } catch (e) {
-        console.error(e);
-      }
-    }
-  };
+    this.setState({dots: currDots});
+  }
 
   renderCamera() {
     return (
@@ -112,6 +79,12 @@ export default class CameraScreen extends React.Component {
         style={{
           flex: 1,
         }}
+        onFacesDetected={face => this.setLandmarks(face)}
+        faceDetectorSettings={{
+          mode: RNCamera.Constants.FaceDetection.Mode.accurate,
+        }}
+        faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
+
         type={this.state.type}
         flashMode={this.state.flash}
         autoFocus={this.state.autoFocus}
@@ -122,108 +95,34 @@ export default class CameraScreen extends React.Component {
         permissionDialogTitle={'Permission to use camera'}
         permissionDialogMessage={'We need your permission to use your camera phone'}
       >
-        <View
-          style={{
-            flex: 0.5,
-            backgroundColor: 'transparent',
-            flexDirection: 'row',
-            justifyContent: 'space-around',
-          }}
-        >
-          <TouchableOpacity style={styles.flipButton} onPress={this.toggleFacing.bind(this)}>
-            <Text style={styles.flipText}> FLIP </Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.flipButton} onPress={this.toggleFlash.bind(this)}>
-            <Text style={styles.flipText}> FLASH: {this.state.flash} </Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.flipButton} onPress={this.toggleWB.bind(this)}>
-            <Text style={styles.flipText}> WB: {this.state.whiteBalance} </Text>
-          </TouchableOpacity>
-        </View>
-        <View
-          style={{
-            flex: 0.4,
-            backgroundColor: 'transparent',
-            flexDirection: 'row',
-            alignSelf: 'flex-end',
-          }}
-        >
-          <Slider
-            style={{ width: 150, marginTop: 15, alignSelf: 'flex-end' }}
-            onValueChange={this.setFocusDepth.bind(this)}
-            step={0.1}
-            disabled={this.state.autoFocus === 'on'}
-          />
-        </View>
-        <View
-          style={{
-            flex: 0.1,
-            backgroundColor: 'transparent',
-            flexDirection: 'row',
-            alignSelf: 'flex-end',
-          }}
-        >
-          <TouchableOpacity
-            style={[
-              styles.flipButton,
-              {
-                flex: 0.3,
-                alignSelf: 'flex-end',
-                backgroundColor: this.state.isRecording ? 'white' : 'darkred',
-              },
-            ]}
-            onPress={this.state.isRecording ? () => {} : this.takeVideo.bind(this)}
-          >
-            {this.state.isRecording ? (
-              <Text style={styles.flipText}> ☕ </Text>
-            ) : (
-              <Text style={styles.flipText}> REC </Text>
-            )}
-          </TouchableOpacity>
-        </View>
-        {this.state.zoom !== 0 && (
-          <Text style={[styles.flipText, styles.zoomText]}>Zoom: {this.state.zoom}</Text>
-        )}
-        <View
-          style={{
-            flex: 0.1,
-            backgroundColor: 'transparent',
-            flexDirection: 'row',
-            alignSelf: 'flex-end',
-          }}
-        >
-          <TouchableOpacity
-            style={[styles.flipButton, { flex: 0.1, alignSelf: 'flex-end' }]}
-            onPress={this.zoomIn.bind(this)}
-          >
-            <Text style={styles.flipText}> + </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.flipButton, { flex: 0.1, alignSelf: 'flex-end' }]}
-            onPress={this.zoomOut.bind(this)}
-          >
-            <Text style={styles.flipText}> - </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.flipButton, { flex: 0.25, alignSelf: 'flex-end' }]}
-            onPress={this.toggleFocus.bind(this)}
-          >
-            <Text style={styles.flipText}> AF : {this.state.autoFocus} </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.flipButton, styles.picButton, { flex: 0.3, alignSelf: 'flex-end' }]}
-            onPress={this.takePicture.bind(this)}
-          >
-            <Text style={styles.flipText}> SNAP </Text>
-          </TouchableOpacity>
-        </View>
       </RNCamera>
     );
   }
 
   render() {
-    return <View style={styles.container}>{this.renderCamera()}</View>;
-  }
+    const dotList = this.state.dots.map((data) => {
+      return (
+          <Circle
+            cx={data.x}
+            cy={data.y}
+            r="3"
+            fill="black"
+          />
+      )
+    })
+    console.log(dotList)
+    return (
+    <View 
+      style={styles.container}
+    >
+      {this.renderCamera()}
+    <Svg
+      width="100%"
+      height="100%">
+      {dotList}
+    </Svg>
+    </View>
+    );}
 }
 
 const styles = StyleSheet.create({

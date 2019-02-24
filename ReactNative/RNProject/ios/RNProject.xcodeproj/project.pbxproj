@@ -21,6 +21,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		26951B3E3EF74FB6A32112D5 /* libRNSVG-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2728229204C74538AE67CF21 /* libRNSVG-tvOS.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -36,6 +37,7 @@
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		CA8333CE678F48CC80145E72 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C891B9D8822E40FA86267A0B /* libRNSVG.a */; };
 		D90816A299B7423FA39E488A /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 322EF1E785394D51BDB36936 /* libRNCamera.a */; };
 		E179A95D2221FC0700B73575 /* BCLlefteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A9372221FC0700B73575 /* BCLlefteyeclosed_200.emd */; };
 		E179A95F2221FC0700B73575 /* BCLlefteyeclosed_200.emd in Resources */ = {isa = PBXBuildFile; fileRef = E179A9372221FC0700B73575 /* BCLlefteyeclosed_200.emd */; };
@@ -58,7 +60,6 @@
 		E179A9752221FC0700B73575 /* FaceDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A93F2221FC0700B73575 /* FaceDetector.framework */; };
 		E179A9772221FC0700B73575 /* FaceDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A93F2221FC0700B73575 /* FaceDetector.framework */; };
 		E179A9782221FC0700B73575 /* FaceDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A93F2221FC0700B73575 /* FaceDetector.framework */; };
-		E179A9792221FC0700B73575 /* dummy.txt in Resources */ = {isa = PBXBuildFile; fileRef = E179A9412221FC0700B73575 /* dummy.txt */; };
 		E179A97B2221FC0700B73575 /* dummy.txt in Resources */ = {isa = PBXBuildFile; fileRef = E179A9412221FC0700B73575 /* dummy.txt */; };
 		E179A97C2221FC0700B73575 /* dummy.txt in Resources */ = {isa = PBXBuildFile; fileRef = E179A9412221FC0700B73575 /* dummy.txt */; };
 		E179A97D2221FC0700B73575 /* GoogleMobileVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E179A9442221FC0700B73575 /* GoogleMobileVision.framework */; };
@@ -361,6 +362,20 @@
 			remoteGlobalIDString = 4107012F1ACB723B00C6AA39;
 			remoteInfo = RNCamera;
 		};
+		E1C813D622223C6900A8607C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7CFBF7033F64B3993D93544 /* RNSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CF68AC11AF0540F00FF9E5C;
+			remoteInfo = RNSVG;
+		};
+		E1C813D822223C6900A8607C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7CFBF7033F64B3993D93544 /* RNSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 94DDAC5C1F3D024300EED511;
+			remoteInfo = "RNSVG-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -382,6 +397,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RNProject/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RNProject/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		2728229204C74538AE67CF21 /* libRNSVG-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNSVG-tvOS.a"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* RNProject-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RNProject-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* RNProject-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNProject-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -390,7 +406,9 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		8FC69E0D001945E7BCEA4D00 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; };
+		A7CFBF7033F64B3993D93544 /* RNSVG.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		C891B9D8822E40FA86267A0B /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
 		E179A9372221FC0700B73575 /* BCLlefteyeclosed_200.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = BCLlefteyeclosed_200.emd; sourceTree = "<group>"; };
 		E179A9382221FC0700B73575 /* BCLjoy_100.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = BCLjoy_100.emd; sourceTree = "<group>"; };
 		E179A9392221FC0700B73575 /* MFTprec_202.emd */ = {isa = PBXFileReference; lastKnownFileType = file; path = MFTprec_202.emd; sourceTree = "<group>"; };
@@ -442,6 +460,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				E179A99D2221FC0700B73575 /* GoogleUtilities.framework in Frameworks */,
 				D90816A299B7423FA39E488A /* libRNCamera.a in Frameworks */,
+				CA8333CE678F48CC80145E72 /* libRNSVG.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +484,7 @@
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
 				E179A9772221FC0700B73575 /* FaceDetector.framework in Frameworks */,
+				26951B3E3EF74FB6A32112D5 /* libRNSVG-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +672,7 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				8FC69E0D001945E7BCEA4D00 /* RNCamera.xcodeproj */,
+				A7CFBF7033F64B3993D93544 /* RNSVG.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -703,6 +724,8 @@
 			isa = PBXGroup;
 			children = (
 				322EF1E785394D51BDB36936 /* libRNCamera.a */,
+				C891B9D8822E40FA86267A0B /* libRNSVG.a */,
+				2728229204C74538AE67CF21 /* libRNSVG-tvOS.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -905,6 +928,15 @@
 			path = frameworks;
 			sourceTree = "<group>";
 		};
+		E1C813D222223C6900A8607C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1C813D722223C6900A8607C /* libRNSVG.a */,
+				E1C813D922223C6900A8607C /* libRNSVG-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1048,6 +1080,10 @@
 				{
 					ProductGroup = E179A9232221F9DE00B73575 /* Products */;
 					ProjectRef = 8FC69E0D001945E7BCEA4D00 /* RNCamera.xcodeproj */;
+				},
+				{
+					ProductGroup = E1C813D222223C6900A8607C /* Products */;
+					ProjectRef = A7CFBF7033F64B3993D93544 /* RNSVG.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1326,6 +1362,20 @@
 			remoteRef = E179A9262221F9DF00B73575 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		E1C813D722223C6900A8607C /* libRNSVG.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSVG.a;
+			remoteRef = E1C813D622223C6900A8607C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E1C813D922223C6900A8607C /* libRNSVG-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNSVG-tvOS.a";
+			remoteRef = E1C813D822223C6900A8607C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1340,7 +1390,6 @@
 				E179A96D2221FC0700B73575 /* LMprec_600.emd in Resources */,
 				E179A9692221FC0700B73575 /* PFFprec_702.emd in Resources */,
 				E179A95D2221FC0700B73575 /* BCLlefteyeclosed_200.emd in Resources */,
-				E179A9792221FC0700B73575 /* dummy.txt in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1480,9 +1529,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 				);
 				INFOPLIST_FILE = RNProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/RNProject\"",
+					"\"$(SRCROOT)/RNProject\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1515,9 +1570,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 				);
 				INFOPLIST_FILE = RNProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/RNProject\"",
+					"\"$(SRCROOT)/RNProject\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1556,6 +1617,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 				);
 				INFOPLIST_FILE = "RNProject-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1600,6 +1662,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 				);
 				INFOPLIST_FILE = "RNProject-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1643,6 +1706,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 				);
 				INFOPLIST_FILE = "RNProject-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1686,6 +1750,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
 				);
 				INFOPLIST_FILE = "RNProject-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
