@@ -29,9 +29,13 @@ app.post('/image', function(req, res){
 
             });
         }else{
-
+            console.log("unsuccessful");
         }
     });
+});
+
+app.get('/', function(req,res){
+    res.send("hello");
 });
 
 app.listen(8000, ()=>{
