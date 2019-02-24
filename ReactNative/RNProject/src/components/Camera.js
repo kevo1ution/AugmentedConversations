@@ -18,6 +18,7 @@ import Svg, {
   Use,
   Defs,
   Stop} from 'react-native-svg';
+import ImgToBase64 from 'react-native-image-base64';
 
 const flashModeOrder = {
   off: 'on',
@@ -94,7 +95,7 @@ export default class CameraScreen extends React.Component {
         p10: 0
       });
       return;
-    } 
+    }
     fObjKeys = Object.keys(fObj.faces[0]);
     for(var i = 0; i<fObjKeys.length; i++){
       if(fObjKeys[i].includes("Position")){
@@ -140,25 +141,26 @@ export default class CameraScreen extends React.Component {
 
   takePicture = async function() {
     if (this.camera) {
-      const data = await this.camera.takePictureAsync();
-      console.log(data);
-      //ImgToBase64.getBase64String(data.uri);
-      // .then(base64string => {
-      //     fetch('http://ec2-18-191-151-255.us-east-2.compute.amazonaws.com:8080/image', {
-      //         method: 'post',
-      //         headers: { 
-      //             'Accept': 'application/json',
-      //             'Content-Type': 'application/json' 
-      //         },
-      //         body: JSON.stringify({
-      //             'image': base64string
-      //         })
-      //     }).then(res => res.json()).then(data2 => {
-      //         console.log(data2);
-      //     }).catch(err => {
-      //         console.log(err);
-      //     })
-      // });
+      const options = { quality: 0.25, base64: true };
+      const data = await this.camera.takePictureAsync(options);
+      ImgToBase64.getBase64String(data.uri).then(base64string => {
+          fetch('http://ec2-user@ec2-34-217-132-105.us-west-2.compute.amazonaws.com:8000/image', {
+              method: 'post',
+              headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+              },
+              body: JSON.stringify({
+                'image': "2"
+              })
+          }).then(res => res.json()).then(data2 => {
+              console.log("Message received from EC2 instance!");
+              console.log(data2);
+          }).catch(err => {
+              console.log("THIS IS A HUGE ERRROR!!");
+              console.log(err);
+          })
+      });
     }
     setTimeout(this.takePicture.bind(this), 1000);
   };
@@ -251,7 +253,7 @@ export default class CameraScreen extends React.Component {
     this.setState({polyToggle: !this.state.polyToggle})
     if (this.state.polyToggle) setTimeout(togglePoly, 500)
     else setTimeout(togglePoly, 1500)
-    
+
   }
 
   renderCamera() {
@@ -326,7 +328,7 @@ export default class CameraScreen extends React.Component {
 
   render() {
     return (
-    <View 
+    <View
       style={styles.container}
     >
       {this.renderCamera()}

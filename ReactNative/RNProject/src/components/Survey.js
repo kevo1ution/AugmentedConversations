@@ -77,7 +77,7 @@ class Survey extends Component {
                     >
                         <Text
                             style={styles.buttonText}
-                            onPress={() => Actions.home()}
+                            onPress={() => Actions.camera()}
                         > Finish Preferences </Text>
                     </TouchableHighlight>
                 </View>
