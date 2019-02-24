@@ -41,33 +41,75 @@ export default class CameraScreen extends React.Component {
     zoom: 0,
     autoFocus: 'on',
     depth: 0,
-    type: 'back',
+    type: 'front',
     whiteBalance: 'auto',
     ratio: '16:9',
     isRecording: false,
     dots: []
   };
+  componentWillMount() {
+    this.takePicture();
+  }
+
+  toggleFacing() {
+    this.setState({
+      type: this.state.type === 'back' ? 'front' : 'back',
+    });
+  }
 
   setLandmarks(fObj) {
-    return;
     var currDots = [];
-    console.log(fObj);
     if (fObj.faces.length == 0){
+      console.log("No Face!");
       this.setState({dots: currDots});
       return;
     } 
-    return;
-    let landmarks = fObj.faces[0].getLandmarks();
-    console.log(landmarks);
-    for (let i = 0; i < landmarks.length; i++) {
-      let point = landmarks[i].getPosition();
-      console.log(point);
-      currDots.push({x: point.x, y: point.y});
+    fObjKeys = Object.keys(fObj.faces[0]);
+    for(var i = 0; i<fObjKeys.length; i++){
+      if(fObjKeys[i].includes("Position")){
+        var val = fObj.faces[0][fObjKeys[i]];
+        currDots.push({x: val.x, y: val.y});
+      }
     }
     this.setState({dots: currDots});
   }
 
+  takePicture = async function() {
+    if (this.camera) {
+      const data = await this.camera.takePictureAsync();
+      console.log(data);
+      //ImgToBase64.getBase64String(data.uri);
+      // .then(base64string => {
+      //     fetch('http://ec2-18-191-151-255.us-east-2.compute.amazonaws.com:8080/image', {
+      //         method: 'post',
+      //         headers: { 
+      //             'Accept': 'application/json',
+      //             'Content-Type': 'application/json' 
+      //         },
+      //         body: JSON.stringify({
+      //             'image': base64string
+      //         })
+      //     }).then(res => res.json()).then(data2 => {
+      //         console.log(data2);
+      //     }).catch(err => {
+      //         console.log(err);
+      //     })
+      // });
+    }
+    setTimeout(this.takePicture.bind(this), 1000);
+  };
+
   renderCamera() {
+    const dotList = this.state.dots.map((data) => {
+      return (
+          <Circle
+            cx={data.x}
+            cy={data.y}
+            r="5"
+            fill="white"
+          />
+      )
+    });
     return (
       <RNCamera
         ref={ref => {
@@ -78,9 +120,9 @@ export default class CameraScreen extends React.Component {
         }}
         onFacesDetected={face => this.setLandmarks(face)}
         faceDetectorSettings={{
-          mode: RNCamera.Constants.FaceDetection.Mode.accurate,
+          mode: RNCamera.Constants.FaceDetection.Mode.fast
         }}
-        //faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
+        faceDetectionLandmarks={RNCamera.Constants.FaceDetection.Landmarks.all}
 
         type={this.state.type}
         flashMode={this.state.flash}
@@ -92,32 +134,39 @@ export default class CameraScreen extends React.Component {
         permissionDialogTitle={'Permission to use camera'}
         permissionDialogMessage={'We need your permission to use your camera phone'}
       >
+        <View
+          style={{position:'absolute', top:0, left:0, height: "100%", width:"100%"}}
+        >
+          <View
+            style={{
+            flex: 0.5,
+            backgroundColor: 'transparent',
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+            }}
+          >
+            <TouchableOpacity style={styles.flipButton} onPress={this.toggleFacing.bind(this)}>
+              <Text style={styles.flipText}> FLIP </Text>
+            </TouchableOpacity>
+          </View>
+          <Svg
+            width="100%"
+            height="100%"
+            fill="transparent"
+          >
+            {dotList}
+          </Svg>
+        </View>
       </RNCamera>
     );
   }
 
   render() {
-    const dotList = this.state.dots.map((data) => {
-      return (
-          <Circle
-            cx={data.x}
-            cy={data.y}
-            r="3"
-            fill="black"
-          />
-      )
-    })
     return (
     <View 
       style={styles.container}
     >
       {this.renderCamera()}
-    <Svg
-      width="100%"
-      height="100%">
-    >
-    {dotList}
-    </Svg>
     </View>
     );}
 }
