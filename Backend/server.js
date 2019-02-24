@@ -35,6 +35,7 @@ app.post('/image', function(req, res){
 });
 
 app.get('/', function(req,res){
+    console.log("Get request");
     res.send("hello");
 });
 
