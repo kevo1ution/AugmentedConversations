@@ -14,7 +14,7 @@ const KEYS = require('./keys.json');
 const REK = new AWS.Rekognition({
     region: "us-west-2",
     accessKeyId: KEYS.awskey,
-    secreteAccessKey: KEYS.awssecretkey,
+    secretAccessKey: KEYS.awssecretkey,
 });
 
 //express app
@@ -31,7 +31,7 @@ function processImage(req, res){
     //var tempId = uuid();
     //fs.writeFileSync('./pics/' + tempId + '.png', buff);
     //var dat = fs.readFileSync('./pics/' + tempId + '.png');
-    var dat = fs.readFileSync('./pics/test.png');
+    var dat = fs.readFileSync('./pics/test' + res + '.png');
 
     //set up parameters to query rekognition
     var params = {
@@ -42,8 +42,79 @@ function processImage(req, res){
     };
 
     //send request
-    rekognition.detectFaces(params, function(err, data){
-        if(err) console.log(err, err.stack);
-        else console.log(data);
+    REK.detectFaces(params, function(err, data){
+        if(err){
+            console.log(err, err.stack);
+        }else{
+            console.log(data);
+            console.log(data.FaceDetails[0].BoundingBox);
+        }
+
     });
 }
+
+function createCollection(){
+    var params = {
+        CollectionId: "DJT"
+    };
+
+    REK.createCollection(params, (err, data)=>{
+        if(err){
+            console.log(err);
+        }else{
+            console.log(data);
+        }
+    });
+}
+
+function addFace(prefix, id){
+    var dat = fs.readFileSync('./pics/' + prefix + id + '.png');
+    var params = {
+        CollectionId: "DJT",
+        Image: {
+            Bytes: dat
+        },
+        DetectionAttributes: ["DEFAULT"],
+        ExternalImageId: "test" + id,
+        MaxFaces: 1,
+    };
+
+    REK.indexFaces(params, (err, data)=>{
+        console.log(data.FaceRecords[0].Face.FaceId);
+    });
+}
+
+function searchFace(id){
+    var dat = fs.readFileSync('./pics/test' + id + '.png');
+    var params = {
+        CollectionId: "DJT",
+        FaceMatchThreshold: 95,
+        Image: {
+            Bytes: dat
+        },
+        MaxFaces: 1
+    };
+    console.time("time" + id);
+
+    REK.searchFacesByImage(params, (err,data)=>{
+        if(err){
+            console.log(err);
+        }else{
+            console.log(data);
+            console.log(data.FaceMatches[0].Face.FaceId);
+        }
+        console.timeEnd("time" + id);
+    });
+}
+
+/*
+searchFace(1);
+searchFace(2);
+searchFace(3);
+searchFace(4);
+searchFace(5);
+*/
+
+addFace("htest", 1);
+//dtrump: c2328e2a-566d-4c2f-8011-4339c233b291
+//hclinton: c5af267f-1f70-41a7-842b-f379208a3f12
