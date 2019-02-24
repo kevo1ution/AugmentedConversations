@@ -19,6 +19,7 @@ app.post('/image', function(req, res){
     
     //1. get face id
     var dat = new Buffer(req.body.image, 'base64');
+    console.log("Recieved Data");
     rek.getFaceId(dat, (succ, faceid)=>{
         //get data from mongodb with faceid
         if(succ){
