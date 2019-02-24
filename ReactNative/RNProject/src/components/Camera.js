@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Slider } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, Slider } from 'react-native';
 // eslint-disable-next-line import/no-unresolved
 import { RNCamera, FaceDetector } from 'react-native-camera';
 import Svg, {
@@ -65,6 +65,7 @@ export default class CameraScreen extends React.Component {
   };
   componentWillMount() {
     this.takePicture();
+    this.togglePoly.bind(this);
   }
 
   toggleFacing() {
@@ -126,16 +127,30 @@ export default class CameraScreen extends React.Component {
 
   renderText() {
     if (this.state.headHeight == 0) return;
+    console.log(this.state.headHeight);
+    console.log(this.state.headWidth);
     return (
-    <Rect
-        x={this.state.originX+this.state.headWidth}
-        y={this.state.originY}
-        width="150"
-        height="250"
-        fill="rgba(100,100,100, .8)"
-        strokeWidth="3"
-        stroke="rgb(0,0,0)"
-    />
+    <Svg
+      width="100%"
+      height="100%"
+      fill="transparent"
+    >
+      <Rect
+          x={this.state.originX+this.state.headWidth}
+          y={this.state.originY}
+          width={150*this.state.headWidth/350}
+          height={250*this.state.headHeight/500}
+          fill="rgba(100,100,100, .8)"
+          strokeWidth="3"
+          stroke="white"
+      >
+        <View
+          style={{flex: 1}}
+        >
+          <Text> Testing </Text>
+        </View> 
+      </Rect>
+    </Svg>
     )
   }
 
@@ -166,7 +181,7 @@ export default class CameraScreen extends React.Component {
   };
 
   renderPolygons() {
-    if (this.state.p1 == 0 && this.state.p5 == 0 || !this.state.polyToggle) return;
+    if ((this.state.p1 == 0 && this.state.p5 == 0) || !this.state.polyToggle) return;
     return (
       <Svg
       width="100%"
@@ -251,9 +266,9 @@ export default class CameraScreen extends React.Component {
 
   togglePoly() {
     this.setState({polyToggle: !this.state.polyToggle})
-    if (this.state.polyToggle) setTimeout(togglePoly, 500)
-    else setTimeout(togglePoly, 1500)
-
+    if (this.state.polyToggle) setTimeout(this.togglePoly.bind(this), 500)
+    else setTimeout(this.togglePoly.bind(this), 1500)
+    
   }
 
   renderCamera() {
