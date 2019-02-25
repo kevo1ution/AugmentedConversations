@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, Slider } from 'react-native';
+import { StyleSheet, View, TouchableOpacity, Slider } from 'react-native';
 // eslint-disable-next-line import/no-unresolved
 import { RNCamera, FaceDetector } from 'react-native-camera';
 import Svg, {
@@ -14,11 +14,14 @@ import Svg, {
   Polygon,
   Polyline,
   Rect,
+  Text,
   Symbol,
   Use,
   Defs,
-  Stop} from 'react-native-svg';
+  Stop,
+  TSpan} from 'react-native-svg';
 import ImgToBase64 from 'react-native-image-base64';
+import { Actions } from 'react-native-router-flux';
 
 const flashModeOrder = {
   off: 'on',
@@ -42,7 +45,7 @@ export default class CameraScreen extends React.Component {
     zoom: 0,
     autoFocus: 'on',
     depth: 0,
-    type: 'front',
+    type: 'back',
     whiteBalance: 'auto',
     ratio: '16:9',
     isRecording: false,
@@ -61,11 +64,22 @@ export default class CameraScreen extends React.Component {
     p8: 0,
     p9: 0,
     p10: 0,
-    polyToggle: true
+    polyToggle: true,
+    prevTime: 0,
+    currPerson: -1,
+    common: []
   };
+
+  constructor(props){
+    super(props);
+  }
+
   componentWillMount() {
-    this.takePicture();
-    this.togglePoly.bind(this);
+    this.snap();
+  }
+
+  componentDidMount() {
+    this.togglePoly();
   }
 
   toggleFacing() {
@@ -74,10 +88,14 @@ export default class CameraScreen extends React.Component {
     });
   }
 
+  snap() {
+    this.takePicture();
+    setTimeout(this.snap.bind(this), 5000);
+  }
+
   setLandmarks(fObj) {
     var currDots = [];
     if (fObj.faces.length == 0){
-      console.log("No Face!");
       this.setState({
         dots: currDots,
         headHeight: 0,
@@ -98,6 +116,7 @@ export default class CameraScreen extends React.Component {
       return;
     }
     fObjKeys = Object.keys(fObj.faces[0]);
+
     for(var i = 0; i<fObjKeys.length; i++){
       if(fObjKeys[i].includes("Position")){
         var val = fObj.faces[0][fObjKeys[i]];
@@ -127,36 +146,84 @@ export default class CameraScreen extends React.Component {
 
   renderText() {
     if (this.state.headHeight == 0) return;
-    console.log(this.state.headHeight);
-    console.log(this.state.headWidth);
+
+    var first = -1;
+    var second = -1;
+    var name = -1;
+
+    if(this.state.currPerson != -1){
+      name = this.state.currPerson.name;
+    } else {
+      return;
+    }
+
+    if(this.state.common.length >= 1){
+      first = this.state.common[0];
+    }
+
+    if(this.state.common.length >= 2){
+      second = this.state.common[1];
+    }
+
+    if(this.state.common.length == 0) {
+      first = "Nothing in common"
+    }
+
     return (
     <Svg
       width="100%"
       height="100%"
       fill="transparent"
     >
-      <Rect
-          x={this.state.originX+this.state.headWidth}
-          y={this.state.originY}
-          width={150*this.state.headWidth/350}
-          height={250*this.state.headHeight/500}
-          fill="rgba(100,100,100, .8)"
-          strokeWidth="3"
-          stroke="white"
+      <Svg
+        width="100%"
+        height="100%"
+        fill="transparent"
       >
-        <View
-          style={{flex: 1}}
-        >
-          <Text> Testing </Text>
-        </View> 
-      </Rect>
+        <Text
+          x={this.state.originX+this.state.headWidth-40}
+          y={this.state.originY}
+          fontSize={35 * this.state.headWidth / 346}
+          fontWeight="bold"
+          textAnchor="start"
+          fill="#fd5c63"
+          stroke="white">
+          {name != -1 && name}
+        </Text>
+        <Text
+          x={this.state.originX+this.state.headWidth-40}
+          y={this.state.originY + 20 + (25 * this.state.headWidth / 346)}
+          fontSize={35 * this.state.headWidth / 346}
+          fontWeight="bold"
+          textAnchor="start"
+          fill="#fd5c63"
+          stroke="white">
+          {first != -1 && first}
+        </Text>
+        <Text
+          x={this.state.originX+this.state.headWidth-40}
+          y={this.state.originY + 20 + (25 * this.state.headWidth / 346) + (25 * this.state.headWidth / 346)}
+          fontSize={35 * this.state.headWidth / 346}
+          fontWeight="bold"
+          textAnchor="start"
+          fill="#fd5c63"
+          stroke="white">
+          {second != -1 && second}
+        </Text>
+      </Svg>
+      <Svg
+        width="100%"
+        height="100%"
+        fill="transparent"
+      >
+      </Svg>
     </Svg>
     )
   }
 
   takePicture = async function() {
     if (this.camera) {
-      const options = { quality: 0.25, base64: true };
+      const options = { quality: 0.1, base64: true };
       const data = await this.camera.takePictureAsync(options);
       ImgToBase64.getBase64String(data.uri).then(base64string => {
           fetch('http://ec2-user@ec2-34-217-132-105.us-west-2.compute.amazonaws.com:8000/image', {
@@ -166,18 +233,32 @@ export default class CameraScreen extends React.Component {
                   'Accept': 'application/json'
               },
               body: JSON.stringify({
-                'image': "2"
+                'image': base64string
               })
           }).then(res => res.json()).then(data2 => {
-              console.log("Message received from EC2 instance!");
-              console.log(data2);
+
+              if(Object.keys(data2).length !== 0){
+                var data = data2[0];
+                var otherTraits = data.interests;
+                console.log("Traits");
+                console.log(data.interests);
+                var traits = [];
+                for(var i = 0; i<this.props.like.length; i++){
+                  let t = this.props.like[i];
+                  if (otherTraits.includes(t)) {
+                    traits.push(t);
+                  }
+                }
+                console.log(traits);
+                this.setState({common: traits, currPerson: data});
+              }else{
+                this.setState({common: [], currPerson: -1});
+              }
           }).catch(err => {
-              console.log("THIS IS A HUGE ERRROR!!");
               console.log(err);
           })
       });
     }
-    setTimeout(this.takePicture.bind(this), 1000);
   };
 
   renderPolygons() {
@@ -266,9 +347,8 @@ export default class CameraScreen extends React.Component {
 
   togglePoly() {
     this.setState({polyToggle: !this.state.polyToggle})
-    if (this.state.polyToggle) setTimeout(this.togglePoly.bind(this), 500)
-    else setTimeout(this.togglePoly.bind(this), 1500)
-    
+    if (this.state.polyToggle) setTimeout(this.togglePoly.bind(this), 1000)
+    else setTimeout(this.togglePoly.bind(this), 2000)
   }
 
   renderCamera() {
@@ -317,16 +397,18 @@ export default class CameraScreen extends React.Component {
             justifyContent: 'space-around',
             }}
           >
-            <TouchableOpacity style={styles.flipButton} onPress={this.toggleFacing.bind(this)}>
-              <Text style={styles.flipText}> FLIP </Text>
-            </TouchableOpacity>
+          <TouchableOpacity style={styles.flipButton} onPress={() => Actions.survey()}>
+             <Text style={styles.flipText}> BACK </Text>
+           </TouchableOpacity>
           </View>
           <Svg
             width="100%"
             height="100%"
             fill="transparent"
           >
-            {dotList}
+            {this.state.polyToggle &&
+              dotList
+            }
             <Svg
                 width="100%"
                 height="100%"

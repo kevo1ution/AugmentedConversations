@@ -15,6 +15,7 @@ class Survey extends Component {
             //ids: {1: false, 2: false, 3: false, 4:false, 5:false, 6:false, 7:false, 8:false, 9:false, 10:false}
             ids: [false, false, false, false, false, false, false, false, false, false]
         }
+        this.mapping = {};
     };
 
     setCity(input) {
@@ -37,9 +38,21 @@ class Survey extends Component {
         return {flex: 1, backgroundColor: 'rgba(0,0,0,0.0)', borderRadius: 10};
     }
 
+    toCamera(){
+      var interests = [];
+      for(var i = 0; i<this.state.ids.length; i++){
+        if(this.state.ids[i]){
+          interests.push(this.mapping[i]);
+        }
+      }
+      console.log(interests);
+
+      Actions.camera({like: interests});
+    }
+
     render() {
         var comps = InitialParse.map((interest, index) => {
-          var path = interest.imagePath;
+          this.mapping[index] = interest.interest;
           return (
               <View>
                   <TouchableHighlight
@@ -77,7 +90,7 @@ class Survey extends Component {
                     >
                         <Text
                             style={styles.buttonText}
-                            onPress={() => Actions.camera()}
+                            onPress={() => this.toCamera()}
                         > Finish Preferences </Text>
                     </TouchableHighlight>
                 </View>

@@ -1,35 +1,35 @@
 const interests = [
     {
-      "imagePath": require('../Images/women1.jpg'),
-      "interest": "Women's Rights"
+      "imagePath": require('../Images/basketball.png'),
+      "interest": "basketball"
     },
     {
-      "imagePath": require('../Images/poverty.jpeg'),
-      "interest": "Ending Poverty"
+      "imagePath": require('../Images/programming.png'),
+      "interest": "programming"
     },
     {
-      "imagePath": require('../Images/animalrights.jpeg'),
-      "interest": "Animal Rights"
+      "imagePath": require('../Images/hackathons.png'),
+      "interest": "hackathons"
     },
     {
-      "imagePath": require('../Images/education.jpg'),
-      "interest": "Education"
+      "imagePath": require('../Images/frisbee.png'),
+      "interest": "frisbee"
     },
     {
-      "imagePath": require('../Images/firstresponders.png'),
-      "interest": "First Responders"
+      "imagePath": require('../Images/fashion.png'),
+      "interest": "fashion"
     },
     {
-      "imagePath": require('../Images/veterans.jpeg'),
-      "interest": "Veterans"
+      "imagePath": require('../Images/pokemongo.png'),
+      "interest": "pokemon go"
     },
     {
-      "imagePath": require('../Images/museums.jpeg'),
-      "interest": "Museums"
+      "imagePath": require('../Images/boba.png'),
+      "interest": "boba"
     },
     {
-      "imagePath": require('../Images/cleanup.jpeg'),
-      "interest": "Cleanup"
+      "imagePath": require('../Images/movies.png'),
+      "interest": "movies"
     }
   ];
 
